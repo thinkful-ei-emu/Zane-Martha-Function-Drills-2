@@ -28,6 +28,34 @@ function beyond(num){
 
 }
 
+function decode(word){
+    let firstLetter=word[0];
+switch(firstLetter){
+    case 'a':
+        console.log(word[1]);
+        return  word[1];
+        
+    case 'b':
+        console.log(word[2]);
+        return word[2];
+        
+
+    case 'c':
+        console.log(word[3]);
+        return word[3];
+        
+    case 'd':
+        console.log(word[4]);
+        return word[4];
+        
+    default:
+        return ' '
+        
+
+
+}
+}
+
 
 
 
