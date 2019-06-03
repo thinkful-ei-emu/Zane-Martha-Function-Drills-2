@@ -47,6 +47,69 @@ function decode (word){
       answer.push(' ');
     }
   });
+  return answer;
 }
 const code = decode('craft block argon meter bells brown croon droop');
-console.log(code);
+
+function dayInAMonth(month, leapYear){
+  switch (month){
+  case 'January':
+  case 'March':
+  case 'May':
+  case 'July':
+  case 'August':
+  case 'October':
+  case 'December':
+    return `${month} has 31 days`;
+  case 'April':
+  case 'June':
+  case 'September':
+  case 'November':
+    return  `${month} has 30 days`;
+  case 'Feburary':
+    if (leapYear === true){
+      return 'Feburary has 29 days';
+    } else{
+      return 'Feburary has 28 days';
+    }
+  }
+}
+
+const howMany = dayInAMonth('May');
+console.log(howMany);
+
+function rockPaperScissors(num){
+  const comp = Math.floor(Math.random() * 3) + 1;
+  if (num < 1 || num >3){
+    throw Error;
+  }else{
+    switch(num){
+    case 1:
+      if (comp === 1){
+        return 'Its a tie';
+      }else if(comp === 2){
+        return 'Computer wins';
+      } else {
+        return 'Player wins';
+      }
+    case 2:
+      if (comp === 2){
+        return 'Its a tie';
+      }else if(comp === 3){
+        return 'Computer wins';
+      } else {
+        return 'Player wins';
+      }
+    case 3:
+      if (comp === 3){
+        return 'Its a tie';
+      }else if(comp === 1){
+        return 'Computer wins';
+      } else {
+        return 'Player wins';
+      }
+    }
+  }
+}
+
+const game1 = rockPaperScissors(1);
