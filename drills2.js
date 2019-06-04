@@ -90,7 +90,49 @@ switch(month){
 return text;
 }
 
-function rockPaperScissors()
+function rockPaperScissors(num){
+    let compPlay= Math.floor(Math.random()*3)+1;
+
+    if(num<1||num>3){
+        throw error;
+    }
+    else{
+    
+    switch(num){
+        case 1:
+            if(compPlay===1){
+                return 'Its a tie'
+            }
+            else if(compPlay===2){
+                return 'Computer Wins'
+            }
+            else{
+                return "Player Wins"
+            }
+        case 2:
+            if(compPlay ===2){
+                return 'Its a Tie'
+            }
+            else if (compPlay===3){
+                return 'Computer Wins'
+            }
+            else{
+                return "Player Wins"
+            }
+        case 3:
+            if( compPlay===3){
+                return 'Its a tie'
+            }
+            else if(compPlay===1){
+                return 'Computer Wins'
+            }
+            else{
+                return 'Player Wins'
+            }
+            
+    }
+}
+}
 
 
 
