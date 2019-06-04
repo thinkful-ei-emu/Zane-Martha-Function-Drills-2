@@ -55,6 +55,45 @@ switch(firstLetter){
 
 }
 }
+let text;
+function howManyDaysInAMonth(month,leapYear){
+if(leapYear==true&&month=='February'){
+    return "February has 29 days."
+}
+switch(month){
+    case 'January':
+    case 'March':
+    case 'May':
+    case 'July':
+    case 'August':
+    case 'February':
+    case 'October':
+    case 'December':
+        text=`${month} has 31 days`
+        break;
+    case 'April':
+    case 'June':
+    case 'September':
+    case 'November':
+        text= `${month} has 30 days`
+    
+    
+   case 'February':
+       text=`${month} has 28 days`
+    
+    default:
+     text=`Must provide a valid month.`
+
+}
+
+
+return text;
+}
+
+function rockPaperScissors()
+
+
+
 
 
 
